@@ -6,7 +6,6 @@ export default function WikiPage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Проверяем сохраненную тему при загрузке
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       setIsDarkMode(true);
@@ -22,7 +21,6 @@ export default function WikiPage() {
 
   return (
     <div className={`wiki-page ${isDarkMode ? 'dark-theme' : ''}`}>
-      {/* Верхняя навигация */}
       <nav className="top-nav">
         <div className="nav-left">
           <a href="/" className="logo">
@@ -49,21 +47,45 @@ export default function WikiPage() {
         </div>
       </nav>
 
-      {/* Основной контент */}
       <main className="main-content">
-        <h1>Добро пожаловать на Вишневые Аллеи Вики!</h1>
+        <div className="container">
+          <header className="header">
+            <img src="/images/bannerwiki.png" alt="Вишневые Аллеи Вики" />
+            <h1>Все Статьи Вики</h1>
+          </header>
 
-        <div className="content-box">
-          <p>
-            Вишневые аллеи - <a href="https://discord.com/invite/wun8gmzdhJ" className="link">Дискорд сервер</a> комьюнити ютуб креатора <a href="https://www.youtube.com/@cherru_" className="link">Cherru (Твинкл)</a>, делает ролики по Сюжетным сезонам Лололошки
-          </p>
-        </div>
+          <div className="divider"></div>
 
-        <div className="content-box">
-          <h2>Основная информация о сервере</h2>
-          <p>
-            Вишнёвые аллеи - <a href="https://discord.gg/xqTMDz7CXK" className="link">дискорд-сервер</a>, который был создан для общения и поддержки автора <a href="/Cherru/" className="link">Cherru</a> (художница/аниматорша). Основная тематика сервера - майнкрафт ютубер MrLololoshka и сама художница. Сервер был создан 24 июля 2022 года, но был открыт 1-го августа 2022-го года. Помощь с созданием сервера художнице (Cherru) предложил Дункан (duncan_reivun), который и заложил первый и значимый фундамент для всего сервера.
-          </p>
+          <div className="content">
+            <h2>Статьи по категориям</h2>
+            <ul className="articles-list">
+              <li>
+                <h3>Основное</h3>
+                <ul>
+                  <li><a href="/Wiki/">Главная страница</a></li>
+                  <li><a href="/server/">О сервере</a></li>
+                  <li><a href="/rules/">Правила сервера</a></li>
+                </ul>
+              </li>
+              <li>
+                <h3>Участники сервера</h3>
+                <ul>
+                  <li><a href="/Cherru/">Черр</a></li>
+                  <li><a href="/Dunkan/">Дункан</a></li>
+                  <li><a href="/Fred/">Фред</a></li>
+                  <li><a href="/Kreygen/">Крейген</a></li>
+                  <li><a href="/lyikon/">Луикон</a></li>
+                  <li><a href="/Raznoschik/">Разносчик</a></li>
+                  <li><a href="/Rocker/">Рокер</a></li>
+                  <li><a href="/sai/">Сай</a></li>
+                  <li><a href="/Sonya/">Соня</a></li>
+                  <li><a href="/tarelca/">Тарелка</a></li>
+                  <li><a href="/Tok/">Ток</a></li>
+                  <li><a href="/waff/">Вафф</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </main>
     </div>

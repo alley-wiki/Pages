@@ -1,5 +1,6 @@
 {
-  "name": "visneviye-allei-wiki",
+  "homepage": "http://alley-wiki.github.io/Pages/ ",
+  "name": "alley-wiki",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -43,6 +44,5 @@
     "gh-pages": "^5.0.0",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2"
-  },
-  "homepage": "https://visneviye-allei-wiki.github.io/test"
+  }
 }
