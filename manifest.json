@@ -1,12 +1,10 @@
 {
-  "short_name": "Вишневые Аллеи",
-  "name": "Вишневые Аллеи Вики",
-  "icons": [
-    {
-      "src": "images/icon.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
+    "icons": [
+      {
+        "src": "/images/icon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
   ],
   "start_url": ".",
   "display": "standalone",
